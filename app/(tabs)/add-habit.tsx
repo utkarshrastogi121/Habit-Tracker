@@ -61,6 +61,8 @@ export default function AddHabitScreen() {
         onChangeText={setTitle}
         style={styles.input}
         textColor="black"
+        outlineColor="#7928ea"
+        activeOutlineColor="#7928ea"
       />
       <TextInput
         label="Description"
@@ -68,6 +70,8 @@ export default function AddHabitScreen() {
         onChangeText={setDescription}
         style={styles.input}
         textColor="black"
+        outlineColor="#7928ea"
+        activeOutlineColor="#7928ea"
       />
       <View style={styles.frequencyContainer}>
         <SegmentedButtons
@@ -99,7 +103,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    backgroundColor: "#f5f5f5",
+    backgroundColor: "#f5f0fb",
     justifyContent: "center",
     color: "black",
   },

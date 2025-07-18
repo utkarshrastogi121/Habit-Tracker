@@ -55,7 +55,8 @@ export default function AuthScreen() {
       style={styles.container}
     >
       <View style={styles.content}>
-        <Text style={styles.title} variant="headlineMedium">
+        <Text style={styles.title} 
+        variant="headlineMedium">
           {" "}
           {isSignUp ? "Create Account" : "Welcome Back"}
         </Text>
@@ -66,6 +67,9 @@ export default function AuthScreen() {
           keyboardType="email-address"
           placeholder="example@gmail.com"
           mode="outlined"
+          outlineColor="#7928ea"
+          activeOutlineColor="#7928ea"
+          textColor="black"
           style={styles.input}
           onChangeText={setEmail}
         />
@@ -74,14 +78,22 @@ export default function AuthScreen() {
           label="Password"
           autoCapitalize="none"
           mode="outlined"
+          outlineColor="#7928ea"
+          activeOutlineColor="#7928ea"
           secureTextEntry
           style={styles.input}
+          textColor="black"
           onChangeText={setPassword}
         />
 
         {error && <Text style={{ color: theme.colors.error }}> {error}</Text>}
 
-        <Button mode="contained" style={styles.button} onPress={handleAuth}>
+        <Button 
+        mode="contained" 
+        style={styles.button} 
+        onPress={handleAuth}
+        labelStyle={{ color: "white" }}
+        >
           {isSignUp ? "Sign Up" : "Sign In"}
         </Button>
 
@@ -89,6 +101,7 @@ export default function AuthScreen() {
           mode="text"
           onPress={handleSwitchMode}
           style={styles.switchModeButton}
+          labelStyle={{ color: "#7928ea" }}
         >
           {isSignUp
             ? "Already have an account? Sign In"
@@ -102,26 +115,28 @@ export default function AuthScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f5f5f5",
+    backgroundColor: "#f5f0fb",
   },
   content: {
-    flex:  1,
+    flex: 1,
     padding: 16,
     justifyContent: "center",
   },
   title: {
     textAlign: "center",
     marginBottom: 24,
+    fontWeight: "bold",
+    color: "#7928ea",
   },
   input: {
+    backgroundColor: "#f5f5f5",
     marginBottom: 16,
   },
   button: {
+    backgroundColor: "#7928ea",
     marginTop: 8,
   },
   switchModeButton: {
     marginTop: 16,
   },
 });
-
- 

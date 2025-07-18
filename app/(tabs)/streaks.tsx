@@ -159,14 +159,12 @@ export default function StreaksScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title} variant="headlineSmall">
-        {" "}
         Habit Streaks
       </Text>
 
       {rankedHabits.length > 0 && (
         <View style={styles.rankingContainer}>
-          {" "}
-          <Text style={styles.rankingTitle}> 🏅 Top Streaks</Text>{" "}
+          <Text style={styles.rankingTitle}> 🏅 Top Streaks</Text>
           {rankedHabits.slice(0, 3).map((item, key) => (
             <View key={key} style={styles.rankingRow}>
               <View style={[styles.rankingBadge, badgeStyles[key]]}>
@@ -195,11 +193,9 @@ export default function StreaksScreen() {
             >
               <Card.Content>
                 <Text variant="titleMedium" style={styles.habitTitle}>
-                  {" "}
                   {habit.title}
                 </Text>
                 <Text style={styles.habitDescription}>
-                  {" "}
                   {habit.description}
                 </Text>
                 <View style={styles.statsRow}>
@@ -228,46 +224,49 @@ export default function StreaksScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f5f5f5",
+    backgroundColor: "#f5f0fb",
     padding: 16,
   },
   title: {
     fontWeight: "bold",
     marginBottom: 16,
+    fontSize: 24,
+    color: "#7928ea",
   },
   card: {
-    marginBottom: 18,
-    borderRadius: 18,
-    backgroundColor: "#fff",
+    marginBottom: 16,
+    borderRadius: 16,
+    backgroundColor: "#e9dcff",
     elevation: 3,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.08,
     shadowRadius: 8,
     borderWidth: 1,
-    borderColor: "#f0f0f0",
+    borderColor: "#d1c4e9",
   },
   firstCard: {
     borderWidth: 2,
-    borderColor: "#7c4dff",
+    borderColor: "#7928ea",
   },
   habitTitle: {
     fontWeight: "bold",
     fontSize: 18,
-    marginBottom: 2,
+    marginBottom: 4,
+    color: "#22223b",
   },
   habitDescription: {
     color: "#6c6c80",
-    marginBottom: 8,
+    marginBottom: 12,
   },
   statsRow: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginBottom: 12,
+    marginBottom: 8,
     marginTop: 8,
   },
   statBadge: {
-    backgroundColor: "#fff3e0",
+    backgroundColor: "#ede7f6",
     borderRadius: 10,
     paddingHorizontal: 12,
     paddingVertical: 6,
@@ -275,7 +274,7 @@ const styles = StyleSheet.create({
     minWidth: 60,
   },
   statBadgeGold: {
-    backgroundColor: "#fffde7",
+    backgroundColor: "#fff8e1",
     borderRadius: 10,
     paddingHorizontal: 12,
     paddingVertical: 6,
@@ -301,10 +300,9 @@ const styles = StyleSheet.create({
     marginTop: 2,
     fontWeight: "500",
   },
-
   rankingContainer: {
     marginBottom: 24,
-    backgroundColor: "#fff",
+    backgroundColor: "#e9dcff",
     borderRadius: 16,
     padding: 16,
     elevation: 2,
@@ -312,12 +310,14 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.08,
     shadowRadius: 8,
+    borderColor: "#d1c4e9",
+    borderWidth: 1,
   },
   rankingTitle: {
     fontWeight: "bold",
     fontSize: 18,
     marginBottom: 12,
-    color: "#7c4dff",
+    color: "#7928ea",
     letterSpacing: 0.5,
   },
   rankingRow: {
@@ -325,7 +325,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginBottom: 8,
     borderBottomWidth: 1,
-    borderBottomColor: "#f0f0f0",
+    borderBottomColor: "#d1c4e9",
     paddingBottom: 8,
   },
   rankingBadge: {
@@ -335,18 +335,16 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginRight: 10,
-    backgroundColor: "#e0e0e0",
+    backgroundColor: "#b39ddb",
   },
   badge1: { backgroundColor: "#ffd700" }, // gold
   badge2: { backgroundColor: "#c0c0c0" }, // silver
   badge3: { backgroundColor: "#cd7f32" }, // bronze
-
   rankingBadgeText: {
     fontWeight: "bold",
     color: "#fff",
     fontSize: 15,
   },
-
   rankingHabit: {
     flex: 1,
     fontSize: 15,
@@ -355,7 +353,7 @@ const styles = StyleSheet.create({
   },
   rankingStreak: {
     fontSize: 14,
-    color: "#7c4dff",
+    color: "#7928ea",
     fontWeight: "bold",
   },
 });
