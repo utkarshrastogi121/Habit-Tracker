@@ -27,7 +27,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     try {
       const session = await account.get();
       setUser(session);
-    } catch (error) {
+    } catch {
       setUser(null);
     } finally {
       setIsLoadingUser(false);
