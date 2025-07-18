@@ -60,30 +60,24 @@ export default function AddHabitScreen() {
         mode="outlined"
         onChangeText={setTitle}
         style={styles.input}
-        textColor="black"
       />
       <TextInput
         label="Description"
         mode="outlined"
         onChangeText={setDescription}
         style={styles.input}
-        textColor="black"
       />
       <View style={styles.frequencyContainer}>
         <SegmentedButtons
           value={frequency}
           onValueChange={(value) => setFrequency(value as Frequency)}
-          style={styles.segmentedButtons}
           buttons={FREQUENCIES.map((freq) => ({
             value: freq,
             label: freq.charAt(0).toUpperCase() + freq.slice(1),
-            labelStyle: styles.segmentedButtonLabel,
           }))}
         />
       </View>
       <Button
-        style={styles.button}
-        labelStyle={styles.buttonLabel}
         mode="contained"
         onPress={handleSubmit}
         disabled={!title || !description}
@@ -101,28 +95,13 @@ const styles = StyleSheet.create({
     padding: 16,
     backgroundColor: "#f5f5f5",
     justifyContent: "center",
-    color: "black",
   },
+
   input: {
-    backgroundColor: "#f5f5f5",
     marginBottom: 16,
   },
-  segmentedButtons: {
-    backgroundColor: "#7928eaff",
-    borderRadius: 40,
-  },
-  segmentedButtonLabel: {
-    color: "white",
-  },
+
   frequencyContainer: {
-    backgroundColor: "#f5f5f5",
     marginBottom: 24,
-  },
-  button: {
-    backgroundColor: "#7928eaff",
-  },
-  buttonLabel: {
-    color: "white",
-    fontWeight: "bold",
   },
 });
