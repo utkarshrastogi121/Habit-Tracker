@@ -1,50 +1,58 @@
-# Welcome to your Expo app 👋
+# Habit Tracker 📱  
+A cross-platform Habit Tracker app built with React Native, Expo, and Appwrite — designed to help users build, track, and maintain daily habits.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+---
 
-## Get started
+## ✨ Features
 
-1. Install dependencies
+- ✅ Create, edit, and delete habits  
+- 📊 Track habit progress and streaks  
+- ☁️ Cloud-based Database with Appwrite  
+- 🎯 Clean and user-friendly mobile interface  
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+## 🛠️ Tech Stack
 
-   ```bash
-   npx expo start
-   ```
+- **Frontend**: React Native + Expo  
+- **Backend as a Service**: [Appwrite](https://appwrite.io/)  
+- **Authentication**: Appwrite Auth 
+- **Database**: Appwrite Cloud Database  
+- **Navigation**: Expo Router  
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 🚀 Getting Started  
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Prerequisites  
+- Node.js  
+- Expo CLI  
+- Appwrite
 
-## Get a fresh project
-
-When you're ready, run:
-
+### Clone the Repository
 ```bash
-npm run reset-project
+git clone https://github.com/utkarshrastogi121/Habit-Tracker.git
+cd Habit-Tracker
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Install Dependencies
+```bash
+npm install
+```
 
-## Learn more
+### Configure Appwrite  
+1. Create a project in your [Appwrite Console](https://console.appwrite.io/)  
+2. Set up **Authentication** and create a **Database Collection** for Habits  
+3. Get your **Appwrite Project ID** and **Endpoint**  
+4. Add these to your environment/config:
+```
+APPWRITE_PROJECT_ID=your_project_id  
+APPWRITE_ENDPOINT=https://your-appwrite-endpoint  
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+---
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### Start the App
+```bash
+npx expo start
+```
